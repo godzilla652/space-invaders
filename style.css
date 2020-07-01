@@ -1,0 +1,42 @@
+body{
+  position: absolute;
+  width: 100%;
+  height: 100%;
+
+  margin: 0; padding: 0;
+
+  background-color: rgb(28, 33, 32);
+}
+
+.hero{
+  border-radius: 2px;
+  box-shadow: 2px 3px 6px 2px #222;
+  width: 50px; height: 50px;
+  background: blue;
+  position: absolute;
+
+  top: calc(100% - 55px);
+  left: calc(50% - 50px);
+}
+.herolaser{
+  width: 17px;
+  height: 17px;
+
+  background: blue;
+
+  position: absolute;
+}
+
+.enemy{
+    border-radius: 2px;
+    box-shadow: 2px 3px 6px 2px #222;
+    width: 50px; height: 50px;
+    background: red;
+    position: absolute;
+}
+.enemylaser{
+  width: 17px;
+  height: 17px;
+  background: red;
+  position: absolute;
+}
