@@ -1,3 +1,6 @@
 let game = new Game()
 
-let enemy = new Enemy()
+
+
+game.create_hero()
+game.create_enemy()

@@ -4,32 +4,7 @@ class Body {
   static zero = 0
 }
 
-class Game {
-  static hero_laser_left
-  static hero_laser_top
 
-  static hero_lasers = []
-  static enemy_lasers = []
-
-  static enemy_counter = 0
-
-  static place(instance){
-    $('body').append(instance)
-  }
-  static unplace(instance){
-    instance.remove()
-  }
-
-  constructor(){
-    this.hero = new Hero()
-
-    this.enemies_counter = 0
-    this.enemies = []
-  }
-  create_enemy(){
-    this.enemies.push(new Enemy())
-  }
-}
 
 class Hero {
   constructor(){
@@ -123,36 +98,7 @@ class HeroLaser {
     this.instance.remove()
   }
 }
-class Enemy {
 
-  constructor(){
-    this.instance = $('<div class="enemy"></div>')
-    $(this.instance).css("left","20px")
-    $(this.instance).css("top","20px")
-
-
-
-    this.fire = setInterval(function(){
-      // console.log('fire')
-    }, 2000)
-    this.move = setInterval(function(){
-      console.log('move')
-    }, 1000)
-
-    // setInterval(function(){
-    //   clearInterval(temp)
-    // }, 3000)
-
-    game.enemies.push(this)
-    Game.place(this.instance)
-  }
-
-
-
-  remove(){
-    Game.unplace(this.instance)
-  }
-}
 class EnemyLaser {
   static all = []
 
