@@ -1,0 +1,49 @@
+body{
+  width: 100vw;
+  height: 100vh;
+  overflow: hidden;
+}
+/* Positioning */
+.floating{
+  position:absolute;
+}
+.relative{
+  position: relative;
+}
+/* Flexible */
+.flexible{
+  display: flex;
+}
+.centered{
+  justify-content: center;
+  align-items: center;
+}
+/* Figures */
+.block{
+  width: 65px;
+  height: 65px;
+  background: black;
+  top: 155px;
+  left: 225px;
+}
+/* Roles */
+#hero{
+  background: green;
+  cursor: none;
+}
+
+
+
+/* Testing */
+.wrapper{
+  width: 400px;
+  height: 400px;
+  border: 1px solid black;
+}
+.block2{
+  width: 65px;
+  height: 65px;
+  background: black;
+  top: -15px;
+  left: 425px;
+}
