@@ -2,7 +2,7 @@ import _ from 'lodash'
 import $ from '../node_modules/jquery/dist/jquery.js'
 
 
-
+console.log('test')
 let hero = {
   width: 65,
   height: 65
