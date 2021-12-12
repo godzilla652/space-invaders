@@ -1,6 +1,6 @@
 import _ from 'lodash'
 import $ from '../node_modules/jquery/dist/jquery.js'
-
+import './styles/style.css' 
 
 console.log('test')
 let hero = {
