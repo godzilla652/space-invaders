@@ -28,15 +28,18 @@ body{
 }
 #mapWrapper{
   border: 1px solid #aaa;
-  width: 90vw;
+  width: 94vw;
   height: 90vh;
   overflow: hidden;
 }
 /* Roles */
 #hero{
+  width: 50px;
+  height: 50px;
   background: green;
   cursor: none;
-  display: none;
+  left: 723px;
+  bottom: 55px;
 }
 
 /* Helpers */
@@ -52,6 +55,8 @@ body{
   border: 1px solid #333;
   background: #aaa;
   overflow-y: visible;
+  /* display: none; */
+  opacity: 0.6;
 }
 /* */
 #t1{
