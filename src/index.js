@@ -12,7 +12,7 @@ window.globalVars = {
   mainIntervalId: undefined,
   isPaused: false,
   delta: 15,
-  interval: 2000,
+  interval: 100,
 
 
   //write monitor
@@ -82,28 +82,48 @@ $(window).keypress(function(event){
 //2,217.6
 
 
+//test
+//add stone to mapWrapper
+// let stone = $("#mapWrapper").append(`<div class="stone block floating" id="t1"></div>`)
+
+
 let map = [
            [0,1,1,1,0,1],
            [1,0,1,1,0,0],
            [1,0,0,1,0,0,]
          ]
 
+//fill mapWrapper from map
 for ( let rowIndex in map){
   for ( let arrayIndex in map[rowIndex]){
-    // console.log(map[rowIndex][arrayIndex])
+    let value = map[rowIndex][arrayIndex]
+    //create block, accrding to position
+    if (value == 1){}
+    else {
+      // exit creating block
+    }
   }
 }
+
 
 function mainInterval(){
   let mainIntervalId = undefined
 
   mainIntervalId = window.setInterval(function(){
     //get old coordinates
-    let oldy = $('#mapWrapper').position().top
-    //delta coordinates
-    let newy = oldy + globalVars.delta
-    //set new coordinates
-    $('#mapWrapper').css("top", newy)
+    // let oldy = $('#t1').position().top
+    // //delta coordinates
+    // let newy = oldy + globalVars.delta
+    // //set new coordinates
+    // $('#t1').css("top", newy)
+
+
+    // console.log('left: ', $("#t1").position().left)
+    // console.log('top: ', $("#t1").position().top)
+    // console.log('width: ', $("#t1").width())
+    // console.log('height: ', $("#t1").height())
+
+
   }, globalVars.interval)
 
   return mainIntervalId
@@ -116,11 +136,9 @@ function start(){
 }
 
 
+
+
 //entry point
 start()
 globalVars.clearMonitor()
 globalVars.updateMonitor()
-
-
-//add stone to mapWrapper
-$("#mapWrapper").append(`<div class="stone block floating" id="t1"></div>`)
