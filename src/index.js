@@ -85,7 +85,7 @@ $(window).keypress(function(event){
 //test
 //add stone to mapWrapper
 // let stone = $("#mapWrapper").append(`<div class="stone block floating" id="t1"></div>`)
-
+// $("#mapWrapper").append("<div>123123</div>/")
 
 let map = [
            [0,1,1,1,0,1],
@@ -97,13 +97,23 @@ let map = [
 for ( let rowIndex in map){
   for ( let arrayIndex in map[rowIndex]){
     let value = map[rowIndex][arrayIndex]
-    //create block, accrding to position
-    if (value == 1){}
+    //create block, according to position
+    if (value == 1){
+      let stone = $(`<div class="stone block floating"></div>`)
+      //rowIndex, arrayIndex
+      let current_left = arrayIndex * 65
+      let current_top = rowIndex * 65
+      $(stone).css("left", `${current_left}px`)
+      $(stone).css("top", `${current_top}px`)
+
+      $("#mapWrapper").append($(stone))
+    }
     else {
       // exit creating block
     }
   }
 }
+
 
 
 function mainInterval(){
@@ -130,7 +140,6 @@ function mainInterval(){
 }
 
 
-//set globalVars.mainIntervalId and continue executing programm
 function start(){
     globalVars.mainIntervalId = mainInterval()
 }
