@@ -15,9 +15,6 @@ window.globalVars = {
   isPaused: false,
   delta: 15,
   interval: 100,
-  //hero coordinates
-  heroX: 723,
-  heroY: 55,
 
   //functions
   updateMonitor: function (){
@@ -181,9 +178,9 @@ for ( let rowIndex in map){
 // console.log(55 ==  $(stones[15]).attr("col"))
 
 
+// main timer
 function mainInterval(){
   let mainIntervalId = undefined
-
   mainIntervalId = window.setInterval(function(){
     //get old coordinates
     // let oldy = $('#t1').position().top
